@@ -36,7 +36,8 @@
            
   <dependency>
       <groupId>com.example.maven-project.server</groupId>
-      <artifactId>server</artifactId>
+           <artifactId>server</artifactId>
+           <version>1.0-SNAPSHOT</version>
     </dependency>
            
     <dependency>
