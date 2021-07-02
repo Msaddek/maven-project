@@ -33,7 +33,12 @@
       <artifactId>servlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
-
+           
+  <dependency>
+      <groupId>com.example.maven-project.server</groupId>
+      <artifactId>server</artifactId>
+    </dependency>
+           
     <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
