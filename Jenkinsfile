@@ -31,12 +31,12 @@ pipeline {
             parallel {
                 stage ('Deploy to Staging') {
                     steps {
-                        bat "cp **/target/*.war %tomcat_dev%"
+                        bat "copy **/target/*.war %tomcat_dev%"
                     }
                 }
                 stage ('Deploy to Production') {
                     steps {
-                        bat "cp **/target/*.war %tomcat_prod%"
+                        bat "copy **/target/*.war %tomcat_prod%"
                     }
                 }
             }
