@@ -31,7 +31,6 @@ pipeline {
             parallel {
                 stage ('Deploy to Staging') {
                     steps {
-                        bat "cmd.exe cp **/target/*.war %tomcat_dev%"
                         deploy adapters: [tomcat9(credentialsId: '345ab1bc-3e20-4adf-980f-b94e3ad77552', path: '', url: 'http://localhost:8090/')], contextPath: null, war: '**/*.war'
                  
                     }
