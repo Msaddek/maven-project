@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage('Build') {
             steps{
-                sh 'mvn clean package'
+                bat 'cmd.exe mvn clean package'
             }
             post{
                 success {
@@ -31,12 +31,12 @@ pipeline {
             parallel {
                 stage ('Deploy to Staging') {
                     steps {
-                        sh "cp **/target/*.war %tomcat_dev%"
+                        bat "cmd.exe cp **/target/*.war %tomcat_dev%"
                     }
                 }
                 stage ('Deploy to Production') {
                     steps {
-                        sh "cp **/target/*.war %tomcat_prod%"
+                        bat "cmd.exe cp **/target/*.war %tomcat_prod%"
                     }
                 }
             }
